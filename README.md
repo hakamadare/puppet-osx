@@ -119,6 +119,18 @@ class { 'osx::global::natural_mouse_scrolling':
 }
 ```
 
+`osx::global::screenshots` - configure built-in screenshot utility.
+
+```puppet
+# Set the default values (location='~/Desktop',type='png')
+include osx::global::screenshots
+
+# ... or set your own
+class { 'osx::global::screenshots':
+  location => '~/Pictures/Screenshots',
+  type     => 'jpg'
+}
+```
 
 `osx::universal_access::cursor_size` - the amount the cursor will be zoomed
 
